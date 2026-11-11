@@ -5,3 +5,4 @@ CLAUDE.md
 .venv/
 site/
 __pycache__/
+overrides/partials/build-info.html

@@ -15,8 +15,13 @@ nav = [
     ] },
 ]
 
+extra_css = ["stylesheets/extra.css"]
+
 [project.theme]
 language = "en"
+custom_dir = "overrides"
+# PNG fallback; the SVG favicon is added in overrides/main.html
+favicon = "assets/images/favicon.png"
 features = [
     "content.code.annotate",
     "content.code.copy",
@@ -36,6 +41,9 @@ features = [
     "search.highlight",
 ]
 
+[project.theme.icon]
+logo = "lucide/circuit-board"
+
 # Light/dark toggle; defaults to the system preference
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
@@ -53,6 +61,11 @@ media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/Pinbot-factory"
+name = "Pinbot-factory on GitHub"
 
 [project.markdown_extensions]
 abbr = {}

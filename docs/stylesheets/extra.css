@@ -1,0 +1,27 @@
+/* Footer: center the social icons vertically against the copyright lines */
+.md-footer-meta__inner {
+    align-items: center;
+}
+
+.md-social {
+    align-items: center;
+    padding-block: 0;
+}
+
+/* Social icons at 1.5x the theme's default size */
+.md-social__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.md-social__link svg {
+    max-height: 1.2rem;
+}
+
+/* Build-info line in the same gray as "Made with" */
+.md-copyright__highlight {
+    color: inherit;
+}
