@@ -1,8 +1,7 @@
+# Pinbot
 
-# Welcome
+Documentation for Pinbot tools.
 
-Welcome to my documentation!
+## Sections
 
-## Getting started
-
-Start writing your documentation here.
+- [Cradle Generator](cradle-generator/get-started.md)
