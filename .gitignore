@@ -1,0 +1,7 @@
+.llm-config/
+.llm/
+CLAUDE.md
+
+.venv/
+site/
+__pycache__/

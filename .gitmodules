@@ -1,0 +1,3 @@
+[submodule ".llm-config"]
+	path = .llm-config
+	url = git@github.com:Atarity/llm-config.git

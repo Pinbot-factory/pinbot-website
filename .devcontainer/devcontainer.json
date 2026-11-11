@@ -1,0 +1,10 @@
+{
+  "name": "Zensical-pinbot",
+  "image": "astral/uv:python3.12-bookworm-slim",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+  },
+  "forwardPorts": [8000],
+  "postCreateCommand": "uv init --bare && uv add --dev zensical"
+}
