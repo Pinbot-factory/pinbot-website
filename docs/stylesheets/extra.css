@@ -62,3 +62,9 @@
         display: none;
     }
 }
+
+/* Pages with hide: toc keep the content width; the TOC column stays empty */
+.md-sidebar--secondary[hidden] {
+    display: block;
+    visibility: hidden;
+}

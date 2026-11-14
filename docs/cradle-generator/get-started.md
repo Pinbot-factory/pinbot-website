@@ -9,11 +9,14 @@ icon: lucide/package-open
 !!! info "Everything stays on your machine"
     The generator runs entirely in your browser. Your board files are never uploaded anywhere.
 
-The only truly custom part of a test jig is the cradle assembly (cassette) the board lies in. Its parts and assembly are covered in the Pinbot mechanics description. One of the most time-consuming tasks in the cradle design is preparing the pocket for your PCBA, taking into account all its features and the test points positions. [Cradle generator]() is our attempt to automate this process to cut the time it takes to design a cradle.
+The only truly custom part of a test jig is the cradle assembly (cassette) the board lies in. Its parts and assembly are covered in the Pinbot mechanics description. One of the most time-consuming tasks in the cradle design is preparing the pocket for your PCBA, taking into account all its features and the test points positions. Cradle generator is our attempt to automate this process to cut the time it takes to design a cradle.
+
+[:lucide-sparkles:  Open generator](https://example.com){ .md-button .md-button--primary }
+{ style="text-align: center" }
+
+Pinbot cradle generator runs in the browser and makes the **cradle** of a Pinbot-180 test jig for your PCBA: the plate the board lies in while spring-loaded test probes (needles) touch its test points from below.
 
 ![Pinbot's cradle plate](images/get-started/cradle-plate.jpg)
-
-Pinbot [cradle generator]() runs in the browser and makes the **cradle** of a Pinbot-180 test jig for your PCBA: the plate the board lies in while spring-loaded test probes (needles) touch its test points from below.
 
 The cradle plate needs two things cut into it:
 
@@ -55,11 +58,11 @@ graph LR
 
 2. **Load it.** Drop the zip onto the view, or click **Load PCBA** at the top. The board and its test points appear in the cradle.
 
-3. **Place the board.** Select the board, then move or turn it with its gizmo until it lies where you want it. You can flip board if needed. See [Moving and turning the board](#moving-and-turning-the-board).
+3. **Place the board.** Select the board, then move or turn it with its gizmo until it lies where you want it. You can flip board if needed. See [Placing the board on the cradle](#placing-the-board-on-the-cradle).
 
 4. **Check the test points.** Yellow markers get a probe needle, violet ones do not. Hover a marker to see details, and switch needles on or off. See [Test points and needles](#test-points-and-needles). Test points are found automatically by name, but you can also set them explicitly when you [export from KiCad](kicad-export.md).
 
-5. **Tune the parameters.** Set clearances, offsets and the rest in **Process params** menu; the live pocket shows the effect in real time. See [Cutting parameters description](cutting-parameters.md).
+5. **Tune the parameters.** Set clearances, offsets and the rest in **Process params** menu; the live pocket shows the effect in real time. See [Cutting parameters description](parameters.md).
 
 6. **Process.** Press **Process** to cut the cradle. Read the console for warnings. Hide PCBA to check result. Repeat stages 4-6 till happy.
 
@@ -117,7 +120,7 @@ Click the board to select it. Its **gizmo** appears.
 |---|---|
 | Red and green arrows | Move the board in X or Y |
 | Yellow square | Move the board freely in XY |
-| Blue arrow | Raise or lower the board against the cradle top (the same as [Board top](cutting-parameters.md#board-top)) |
+| Blue arrow | Raise or lower the board against the cradle top (the same as [Board top](parameters.md#board-top)) |
 | Blue ring | Turn the board by 45° about Z |
 | Red and green rings | Turn the board by 90° about X or Y, to put another side up |
 
@@ -197,13 +200,13 @@ In the cradle generator you can always disable individual test points and enable
     **Y axiz points up**, as in KiCad's position files. If your markers land mirrored or off the board, check the origin and the Y direction of the CSV against the STEP.
 
 ??? pinbot-question "A test point I need has no marker"
-    It was not recognised as a test point by cradle generator. From KiCad, give it the custom `Pinbot` field `probe`, or pass `--include`, see [Choosing what gets a needle](kicad-export.md#choosing-what-gets-a-needle).
+    It was not recognised as a test point by cradle generator. From KiCad, give it the custom `Pinbot` field `probe`, or pass `--include`, see [Choosing test points](kicad-export.md#choosing-test-points).
 
 ??? pinbot-question "The pocket goes right through the cradle"
-    Some cavity is so deep that its floor would be thinner than [Min floor](cutting-parameters.md#min-floor), so it is cut through. The console notes it. Lower the board with **Board top**, or accept the opening.
+    Some cavity is so deep that its floor would be thinner than [Min floor](parameters.md#min-floor), so it is cut through. The console notes it. Lower the board with **Board top**, or accept the opening.
 
 ??? pinbot-question "Parts of my board are missing from the pocket"
     The generator only sees parts that have a 3D model. `kicad-export.py --check` lists those without one, see [Missing 3D models](kicad-export.md#missing-3d-models).
 
 ??? pinbot-question "Processing failed or the chamfer was not cut"
-    Read the console. A chamfer that cannot be built is left out and the cradle is cut without it. If Process itself fails, try a slightly different [Edge offset](cutting-parameters.md#edge-offset) or [Min inner R](cutting-parameters.md#min-inner-radius), and report the board if it keeps failing.
+    Read the console. A chamfer that cannot be built is left out and the cradle is cut without it. If Process itself fails, try a slightly different [Edge offset](parameters.md#edge-offset) or [Min inner R](parameters.md#min-inner-radius), and report the board if it keeps failing.
