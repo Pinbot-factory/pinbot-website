@@ -6,5 +6,5 @@
     "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
   },
   "forwardPorts": [8000],
-  "postCreateCommand": "uv init --bare && uv add --dev zensical"
+  "postCreateCommand": "apt-get update && apt-get install -y --no-install-recommends openssh-client && uv sync"
 }
