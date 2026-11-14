@@ -5,11 +5,13 @@ A [Zensical](https://zensical.org) site: sources in `docs/`, config in `zensical
 ## Commands
 
 `scripts/site.sh` writes the footer build info (year, commit) and passes its arguments to `uv run zensical`.
+Zensical templates can't read the date or run git, and `zensical.toml` has no env vars, so a plain `uv run zensical` leaves the footer build line empty.
 
 - `uv sync` — install dependencies (zensical) into `.venv/` from `uv.lock`.
-- `scripts/site.sh serve --dev-addr 0.0.0.0:8000` — dev server with live rebuild at http://localhost:8000.
-- `scripts/site.sh build` — build the static site into `site/`.
-- `scripts/site.sh build --clean` — build after clearing the `.cache/` build cache.
+- We call intermediate script to gather current year and build hash:
+    - `scripts/site.sh serve --dev-addr 0.0.0.0:8000` — dev server with live rebuild at http://localhost:8000.
+    - `scripts/site.sh build` — build the static site into `site/`.
+    - `scripts/site.sh build --clean` — build after clearing the `.cache/` build cache.
 
 ## Icons
 

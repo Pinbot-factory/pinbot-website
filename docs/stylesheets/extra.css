@@ -25,3 +25,40 @@
 .md-copyright__highlight {
     color: inherit;
 }
+
+/* Custom admonition "pinbot-question": light gray, with the question icon */
+.md-typeset .admonition.pinbot-question,
+.md-typeset details.pinbot-question {
+    background-color: #9e9e9e1a;
+}
+
+.md-typeset .pinbot-question > .admonition-title::before,
+.md-typeset .pinbot-question > summary::before {
+    background-color: #9e9e9e;
+    -webkit-mask-image: var(--md-admonition-icon--question);
+    mask-image: var(--md-admonition-icon--question);
+}
+
+.md-typeset .pinbot-question > .admonition-title::after,
+.md-typeset .pinbot-question > summary::after {
+    color: #9e9e9e;
+}
+
+/* Back-to-top button centered under the right sidebar (61rem grid, 12.1rem sidebar) */
+[dir=ltr] .md-top {
+    margin-left: 0;
+    left: auto;
+    right: calc(max(0px, (100% - 61rem) / 2) + 6.05rem);
+    transform: translateX(50%);
+}
+
+[dir=ltr] .md-top[hidden] {
+    transform: translate(50%, .2rem);
+}
+
+/* Below 60em the right sidebar collapses into a TOC button; hide back-to-top there */
+@media screen and (max-width: 59.984375em) {
+    .md-top {
+        display: none;
+    }
+}
