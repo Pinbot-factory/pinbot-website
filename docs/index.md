@@ -2,6 +2,7 @@
 title: "Pinbot: design electronics test jigs"
 description: Pinbot is a platform that makes it easy to design and deploy test jigs for electronics
 hide: toc
+nav_card: "main-badge"
 ---
 
 # Pinbot

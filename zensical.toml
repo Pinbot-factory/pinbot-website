@@ -7,9 +7,7 @@ repo_url = "https://github.com/Pinbot-factory"
 repo_name = "Pinbot"
 
 nav = [
-    { "Home" = [
-        "index.md",
-    ] },
+    { "Home" = "index.md" },
     { "Cradle Generator" = [
         { "Generator basics" = "cradle-generator/get-started.md" },
         { "KiCad export" = "cradle-generator/kicad-export.md" },

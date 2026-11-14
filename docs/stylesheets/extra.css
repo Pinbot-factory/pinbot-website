@@ -68,3 +68,46 @@
     display: block;
     visibility: hidden;
 }
+
+/* Card below the navigation menu (overrides/partials/nav-cards/) */
+:root {
+    --pinbot-nav-card-bg: var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="slate"] {
+    --pinbot-nav-card-bg: #2a2e3a;
+}
+
+.pinbot-nav-card {
+    /* Same gap as between menu items */
+    margin: .2rem .6rem 0;
+    padding: .6rem .8rem;
+    font-size: .64rem;
+    line-height: 1.5;
+    background-color: var(--pinbot-nav-card-bg);
+    border-radius: .4rem;
+}
+
+.pinbot-nav-card p {
+    margin: 0;
+}
+
+.pinbot-nav-card p + p {
+    margin-top: .4rem;
+}
+
+.pinbot-nav-card a {
+    color: var(--md-typeset-a-color);
+}
+
+.pinbot-nav-card svg {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -.15em;
+    fill: currentcolor;
+}
+
+.pinbot-nav-card svg.lucide {
+    fill: none;
+    stroke: currentcolor;
+}
