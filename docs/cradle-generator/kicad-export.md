@@ -6,7 +6,7 @@ icon: lucide/square-arrow-right-exit
 
 # Export PCBA from KiCad to cradle generator
 
-`kicad-export.py` turns a KiCad board into one zip archive that [Pinbot cradle generator]() loads in a single step. The archive holds the board model, its test points and a traceability report. **Your board file is never changed** while script makes it is whole copy to process.
+`kicad-export.py` turns a KiCad board into one zip archive that [Pinbot cradle generator](/generator) loads in a single step. The archive holds the board model, its test points and a traceability report. **Your board file is never changed** while script makes it is whole copy to process.
 
 ``` title="Requirements"
 - Python 3.9+ with no extra libs required
@@ -14,9 +14,10 @@ icon: lucide/square-arrow-right-exit
 - PCBA files in KiCad5+ format
 ```
 
-## Quick start
+[:lucide-download:  Download kicad-export.py](/kicad-export.py){ .md-button .md-button--primary }
+{ style="text-align: center" }
 
-Download [`kicad-export.py`](https://example.com/kicad-export.py) and put it anywhere.
+## Quick start
 
 ```bash title="Export one board"
 python3 kicad-export.py path/to/board.kicad_pcb -o out/
@@ -35,7 +36,7 @@ tmp/boards/dojoe__Twonkie/hw/twonkie.kicad_pcb
   → tmp/zips/261109_pinbot-board_twonkie.zip (0.6 MB)
 ```
 
-Then open [Pinbot generator]() and drop the resulting zip onto the view.
+Then open [Pinbot generator](/generator) and drop the resulting zip onto the view.
 
 ## More ways to run
 === "A project file"

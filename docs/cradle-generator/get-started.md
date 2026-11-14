@@ -11,7 +11,7 @@ icon: lucide/package-open
 
 The only truly custom part of a test jig is the cradle assembly (cassette) the board lies in. Its parts and assembly are covered in the Pinbot mechanics description. One of the most time-consuming tasks in the cradle design is preparing the pocket for your PCBA, taking into account all its features and the test points positions. Cradle generator is our attempt to automate this process to cut the time it takes to design a cradle.
 
-[:lucide-sparkles:  Open generator](https://example.com){ .md-button .md-button--primary }
+[:lucide-sparkles:  Open generator](/generator){ .md-button .md-button--primary }
 { style="text-align: center" }
 
 Pinbot cradle generator runs in the browser and makes the **cradle** of a Pinbot-180 test jig for your PCBA: the plate the board lies in while spring-loaded test probes (needles) touch its test points from below.
