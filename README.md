@@ -1,4 +1,4 @@
-# pinbot-website-proto
+# pinbot.cc website
 
 A [Zensical](https://zensical.org) site: sources in `docs/`, config in `zensical.toml`, built static output in `site/`, build cache in `.cache/`.
 
@@ -29,3 +29,8 @@ Usage:
 
 - In `zensical.toml`, reference an icon by path: `lucide/sun`, `fontawesome/brands/github`.
 - In Markdown, use the path with dashes between colons: `:lucide-sun:`, `:fontawesome-brands-github:`.
+
+## License
+- [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) is for docs, pictures, articles, video, assets, etc.
+
+Pinbot projects structure may mix different sources and artifacts — check corresponding dirrectories for `LICENSE` file.
