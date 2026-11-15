@@ -14,7 +14,7 @@ icon: lucide/square-arrow-right-exit
 - PCBA files in KiCad5+ format
 ```
 
-[:lucide-download:  Download kicad-export.py](/kicad-export.py){ .md-button .md-button--primary }
+[:lucide-download:  Download kicad-export.py](https://github.com/Pinbot-factory/pinbot-cradle-generator/blob/main/scripts/kicad-export.py){ .md-button .md-button--primary }
 { style="text-align: center" }
 
 ## Quick start
