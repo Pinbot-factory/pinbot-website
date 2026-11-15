@@ -29,6 +29,7 @@ Usage:
 
 - In `zensical.toml`, reference an icon by path: `lucide/sun`, `fontawesome/brands/github`.
 - In Markdown, use the path with dashes between colons: `:lucide-sun:`, `:fontawesome-brands-github:`.
+- In html it is like `.icons/fontawesome/brands/github.svg`
 
 ## License
 - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) is for docs, pictures, articles, video, assets, etc.
